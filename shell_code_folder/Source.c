@@ -76,7 +76,7 @@ void __stdcall shellcode_decrypt_entry()
 void  shellcode_main()
 {
 	
-	char ProcToKillName_str[] = { 'n', 'o', 't', 'e', 'p', 'a', 'd', '.', 'e', 'x', 'e'};
+	char ProcToKillName_str[] = { 'n', 'o', 't', 'e', 'p', 'a', 'd', '.', 'e', 'x', 'e','\0'};
 	HMODULE kernel32dll = find_module_by_hash(KERNEL32_HASH);
 	FARPROC CreateToolhelp32Snapshot_by_hash = find_function(kernel32dll, CREATETOOLHELP32SNAPSHOT_HASH);
 	FARPROC Process32First_by_hash = find_function(kernel32dll, PROCESS32FIRST_HASH);
